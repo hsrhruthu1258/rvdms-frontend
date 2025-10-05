@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violation Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004aad;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #004aad;
+      color: white;
+    }
+
+    .no-data {
+      text-align: center;
+      color: #777;
+      margin-top: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #004aad;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background-color: #003580;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Vehicle Violation Details</h1>
+  </header>
+
+  <div class="container">
+    <h2>Violation Record for Vehicle</h2>
+
+    <table>
+      <tr>
+        <th>Violation ID</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Location</th>
+        <th>Fine Amount</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>VLN1023</td>
+        <td>2025-05-21</td>
+        <td>Speeding</td>
+        <td>Main Street, City A</td>
+        <td>₹500</td>
+        <td>Paid</td>
+      </tr>
+      <tr>
+        <td>VLN1056</td>
+        <td>2025-08-13</td>
+        <td>Signal Jumping</td>
+        <td>Market Road, City B</td>
+        <td>₹1000</td>
+        <td>Pending</td>
+      </tr>
+    </table>
+
+    <p class="no-data">If no records found, please verify the Registration Number or VIN.</p>
+
+    <div class="btn-container">
+      <button onclick="window.location.href='menu.html'">Back to Menu</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Vehicle Registration Department. All rights reserved.
+  </div>
+
+</body>
+</html>

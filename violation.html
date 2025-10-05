@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Vehicle | RVDMS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #f3f4f6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 400px;
+    }
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    button, .back-btn {
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    button:hover, .back-btn:hover {
+      background-color: #162e7b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Search Vehicle Violations</h2>
+    <form id="violationForm">
+      <input type="text" id="vin" placeholder="Enter Registration No or VIN" required>
+      <button type="submit">Search</button>
+    </form>
+    <br>
+    <a href="menu.html" class="back-btn">⬅ Back to Menu</a>
+  </div>
+
+  <script>
+    document.getElementById("violationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent page reload
+      const vin = document.getElementById("vin").value.trim();
+
+      // Check for known VIN
+      if (vin.toUpperCase() === "VIN10023") {
+        window.location.href = "violation details.html"; // Go to your saved details page
+      } else {
+        alert("No violation record found for: " + vin);
+      }
+    });
+  </script>
+</body>
+</html>
+
